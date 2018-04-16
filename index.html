@@ -2,6 +2,16 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+   <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 
@@ -71,7 +81,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	margin: 2% 0 3% 0;
 }
 /*--content--*/
-	.content-middle {
+.content-middle {
     width: 100%;
     background: url(../images/content_middle.jpg) no-repeat;
 	-webkit-background-size: cover;
@@ -167,6 +177,7 @@ p.m_2{
 </style>
 </head>
 <body>
+
 <div class="header" id="download">
 	<div class="wrap">
 		<div class="header-left">
@@ -187,7 +198,7 @@ p.m_2{
 <h2>Bottom Modal</h2>
 
 <!-- Trigger/Open The Modal -->
-<center><button id="myBtn">Open Modal</button></center>
+<button id="myBtn">Open Modal</button>
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
